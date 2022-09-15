@@ -9,7 +9,8 @@
   "scripts": {
     "install-server": "npm install",
     "install-dependencies": " npm run install-client && npm run install-server ",
-    "build-client": "npm run build --prefix client",
+    "build-client": "cd client && npm run build",
+    "build":"react-scripts build --prefix client",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build-client",
     "server" : "npm run server --prefix server",
