@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-
+  "engines": {
+    "node": "18.9.0"
+  },
   "scripts": {
-    "server":"nodemon index.js"
-    
+    "server": "nodemon index.js --ignore client"
   },
   "keywords": [],
   "author": "",
