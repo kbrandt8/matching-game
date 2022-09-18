@@ -323,17 +323,14 @@ h4 {
 
 @media only screen and (max-width: 500px) {
   html {
-    font-size: 5px;
+    font-size: 6px;
   }
-  .container{
+  main{
     max-width:90%;
   }
+  
 
-  .item{
-    height:10rem;
-    width: 10rem;
-    font-size:6rem;
-  }
+
 }
 @media only screen and (max-width: 750px) {
   html {
