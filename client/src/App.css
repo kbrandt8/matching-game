@@ -325,7 +325,7 @@ h4 {
   html {
     font-size: 5px;
   }
-  main{
+  .container{
     max-width:90%;
   }
 
