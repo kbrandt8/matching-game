@@ -1,0 +1,347 @@
+@font-face {
+  font-family: 'RampartOne-Regular';
+  src: url(./RampartOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url(./RobotoMono-VariableFont_wght.ttf);
+}
+
+
+html {
+  font-size: 9px;
+  background-color: #F4C9E5;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'RampartOne-Regular';
+}
+h1,
+h2,
+h3{
+  margin: auto;
+  text-align: center;
+  width: 50rem;
+  border-radius: 5px;
+}
+
+li,
+button,
+input {
+  font-family: 'Roboto Mono' !important;
+}
+
+h1 {
+  font-size: 5rem;
+  background-color: #E9C7FF;
+}
+
+h2 {
+  font-size: 2.5rem;
+  background-color: #E9C7FF;
+}
+
+h3 {
+  font-size: 2rem;
+  background-color: #C7FFE9;
+  border: double #FF468F;
+}
+
+.container {
+  margin: auto;
+  width: 50rem;
+  background-color: #FF468F;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 15px;
+  border: double .5rem #C7FFE9;
+}
+
+.item {
+  margin: 1rem;
+  background-color: #C7FFE9;
+  width: 12.5rem;
+  height: 12rem;
+  border-radius: 15px;
+  text-align: center;
+  border: double .5rem #E9C7FF;
+  font-size: 7rem;
+
+}
+
+.item:hover {
+  background-color: #E9C7FF;
+}
+
+
+.dimmed {
+  margin: 1rem;
+  background-color: #C7FFE9;
+  width: 12.5rem;
+  height: 12rem;
+  border-radius: 15px;
+  text-align: center;
+  border: double .5rem #E9C7FF;
+  font-size: 7rem;
+  opacity: .5;
+  pointer-events: none;
+}
+
+nav {
+  border: #FF468F 5px solid;
+  background-color: #FF468F;
+  border-radius: 50px;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+
+ul {
+  overflow: hidden;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+li {
+  font-size: 2rem;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'FredokaOne';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+li>div {
+  padding: 5px;
+  text-transform: capitalize;
+}
+
+li:nth-child(odd) {
+  background-color: #C7FFE9;
+}
+
+li:nth-child(even) {
+  background-color: #E9C7FF;
+}
+
+
+.bigScreen {
+  position: absolute;
+  top: 25%;
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bigScreen>ul {
+  width: 75%;
+  animation: scroll 15s linear infinite;
+  overflow-y: auto;
+
+}
+
+.bigScreen>ul>li {
+  font-size: 4rem;
+  padding-bottom: 10px;
+}
+
+nav>h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 9998;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.smallScreen>h1 {
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+  position: sticky;
+
+}
+
+.smallScreen>h1>button {
+  padding: 5px;
+  margin: 0px;
+  font-size: 1.5rem;
+}
+
+@keyframes scroll {
+  from {
+    -moz-transform: translatey(10%);
+    -webkit-transform: translatey(10%);
+    transform: translatey(10%);
+  }
+
+  to {
+    -moz-transform: translatey(-100%);
+    -webkit-transform: translatey(-100%);
+    transform: translatey(-100%);
+  }
+}
+
+.smallScreen {
+  overflow-y: scroll;
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  left: 25%;
+  width: 50%;
+}
+
+.smallScreen>ul {
+  margin: 0 auto;
+  padding: 0;
+
+}
+
+.smallScreen>ul>li {
+  justify-content: left;
+  padding-left: 15px;
+  font-size: 2rem;
+}
+
+.smallScreen::-webkit-scrollbar {
+  width: 20px;
+}
+
+.smallScreen::-webkit-scrollbar-thumb {
+  background-color: #C7FFE9;
+  border-radius: 100px;
+}
+
+input,
+button {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50px;
+  border: #FF468F 2px dashed;
+  background-color: #F4C9E5;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.loading {
+  position: absolute;
+  z-index: 9999;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #E9C7FF;
+}
+
+h4 {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 10rem;
+  top: 25%;
+}
+
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #FF468F;
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: #FF468F;
+}
+
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+
+  5% {
+    transform: scale(1.1);
+  }
+
+  39% {
+    transform: scale(0.85);
+  }
+
+  45% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+
+@media only screen and (max-width: 750px) {
+  html {
+    font-size: 7.5px;
+  }
+
+  main {
+    margin-top: 125px;
+  }
+
+}
+
+@media only screen and (max-width:850) {
+  .smallScreen>h1 {
+    letter-spacing: normal;
+  }
+
+}
+
+@media only screen and (min-width : 750px) {
+  .smallScreen {
+    height: 75px;
+    left: 0px;
+    width: 25%;
+  }
+}
