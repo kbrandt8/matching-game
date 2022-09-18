@@ -27,6 +27,7 @@ function ContextProvider({ children }) {
       setLoading(false)
     }, [750])
   })
+
   
   const sendScore = () => {
     Axios.post("/addScore", {
@@ -37,6 +38,10 @@ function ContextProvider({ children }) {
 
     ))
     setSend(false)
+    setGameData("Sending & Starting Over...")
+    setTimeout(()=>{
+     startOver()
+    },[3000])
   }
 
 
@@ -64,6 +69,8 @@ function ContextProvider({ children }) {
     setTurns(0)
     setMatched([])
     setToMatch([])
+    shuffle(theItems)
+    setAllItems(theItems)
     setGameData("Start Over?")
   }
 
@@ -86,6 +93,7 @@ function ContextProvider({ children }) {
       setSend(true)
     }
   }, [toMatch])
+
 
 
   function shuffle(array) {

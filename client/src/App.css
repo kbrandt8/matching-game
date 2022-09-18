@@ -148,6 +148,10 @@ li:nth-child(even) {
   overflow: hidden;
 }
 
+.bigScreen>h1{
+  position: absolute;
+}
+
 .bigScreen>ul {
   width: 75%;
   animation: scroll 15s linear infinite;
