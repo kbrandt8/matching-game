@@ -140,6 +140,7 @@ li:nth-child(even) {
 
 
 .bigScreen {
+  z-index: 9999;
   position: absolute;
   top: 25%;
   height: 50%;
@@ -201,8 +202,9 @@ nav>h1 {
   height: 75px;
   position: absolute;
   top: 0px;
-  left: 25%;
-  width: 50%;
+  left: 10%;
+  width: 80%;
+  scrollbar-width: thin;
 }
 
 .smallScreen>ul {
@@ -327,6 +329,8 @@ h4 {
 
   main {
     margin-top: 125px;
+    width:90%;
+    margin-left: 5%;
   }
 
 }
