@@ -88,7 +88,7 @@ color:#000;
 .dimmed {
   margin: 1rem;
   background-color: #C7FFE9;
-  width: 12.5rem;
+  width: 12rem;
   height: 12rem;
   border-radius: 15px;
   text-align: center;
@@ -329,7 +329,7 @@ h4 {
 }
 
 @media only screen and (max-width: 400px) {
-.item{
+.item,.dimmed{
   width:11rem;
   height:11rem;
   font-size:6rem;
@@ -340,7 +340,7 @@ h4 {
     max-width:90%;
     margin:0 auto;
   }
-  .item {
+  .item,.dimmed {
     margin: .5rem;
     
   }
