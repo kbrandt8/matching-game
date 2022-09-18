@@ -16,7 +16,6 @@ function ContextProvider({ children }) {
   const [show, setShow] = useState(false)
   const [loading, setLoading] = useState(true)
 
-
   useEffect(() => {
     Axios.get("/getScores")
       .then(res => setScores(res.data))
@@ -33,13 +32,10 @@ function ContextProvider({ children }) {
     Axios.post("/addScore", {
       name,
       turns
-    }).then((response) => (
-      setScores([...scores, { name, turns }])
-
-    ))
-    setSend(false)
+    })
     setGameData("Sending & Starting Over...")
     setTimeout(()=>{
+    setScores([...scores, { name, turns }])
      startOver()
     },[3000])
   }
@@ -72,6 +68,7 @@ function ContextProvider({ children }) {
     shuffle(theItems)
     setAllItems(theItems)
     setGameData("Start Over?")
+    setSend(false)
   }
 
   useEffect(() => {

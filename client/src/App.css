@@ -80,6 +80,9 @@ h3 {
 .item:hover {
   background-color: #E9C7FF;
 }
+.item:disabled{
+color:#000;
+}
 
 
 .dimmed {
