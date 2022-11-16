@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "engines": {
-    "node": "18"
-  },
+  "engines": { "node": "16.x" },
   "scripts": {
     "heroku-prebuild": "npm install --dev",
     "install-server": "npm install",
