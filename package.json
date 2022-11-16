@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "engines": {
-    "node": "18.9.0"
+    "node": "18"
   },
   "scripts": {
     "heroku-prebuild": "npm install --dev",
