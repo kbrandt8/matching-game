@@ -15,8 +15,23 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect(process.env.API)
+// mongoose.connect(process.env.API)
+
+mongoose.connect(process.env.API, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    poolSize: 1
+  })
+    .then(() => {
+      app.listen(port);
+    })
+
 const port = process.env.PORT || 7000
+
+
+
 
 app.get("/getScores",(req,res)=>{
     ScoreModel.find({},(err,result)=>{
@@ -36,12 +51,19 @@ app.post("/addScore", async (req,res)=>{
 })
 
   
- if (process.env.NODE_ENV === 'production') {
- app.use(express.static(path.join('client/build')));
-    app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-    });
-}
+//  if (process.env.NODE_ENV === 'production') {
+//  app.use(express.static(path.join('client/build')));
+//     app.get('*', (req, res) => {
+//       res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+//     });
+// }
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '/client', 'build')));
+    app.get('/*', (req, res) => {
+      res.sendFile(path.join(__dirname, '/client', 'build', 'index.html'));
+    })
+  }
 
 
 
